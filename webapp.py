@@ -135,20 +135,28 @@ def predict_genre(text, model_choice):
 #   st.write(accuracy_score(X,prediction))
   return output_list
 
+def getGenreNames(inlist):
+  outlist =[] 
+  for i in range(len(inlist)):
+    name = inlist[i][1]
+    outlist.append(name)
+
+  return outlist
 if __name__ == '__main__':
   st.title("Movie Genre classification")
   models = ['Logistic regression', 'SVM']
   initial_plot="In a bleak dystopian future, humanity clings to survival deep underground within the confines of a colossal silo. Juliette, an engineer tasked with unraveling the mystery behind the death of a colleague, uncovers startling secrets that threaten the very fabric of their enclosed world. Based on the novel of the same name by Hugh Howey."
   text = st.text_area("Write an overview of the movie to predict genre.",initial_plot)
 
- 
   chosen_model = st.radio('Select a model to predict', models)
  
   if st.button('Predict'):
 
     if chosen_model == models[0]:
       genre_list = predict_genre(text, models[0])
-      st.success("Predicted genres: {0}".format(genre_list))
+      genre_list_final = getGenreNames(genre_list)
+      st.success("Predicted genres: {0}".format(genre_list_final))
     elif chosen_model == models[1]:
       genre_list = predict_genre(text, models[1])
-      st.success("Predicted genres: {0}".format(genre_list))
+      genre_list_final = getGenreNames(genre_list)
+      st.success("Predicted genres: {0}".format(genre_list_final))
