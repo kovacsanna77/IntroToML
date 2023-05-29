@@ -1,0 +1,4 @@
+matplotlib
+seaborn
+opencv-python
+nltk
