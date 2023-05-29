@@ -132,7 +132,7 @@ def predict_genre(text, model_choice):
       temp_list = [int(round(row.values[0]*100,0)), index.capitalize()]
       output_list.append(temp_list)
 
-  st.write(accuracy_score(X,prediction))
+#   st.write(accuracy_score(X,prediction))
   return output_list
 
 if __name__ == '__main__':
@@ -147,7 +147,7 @@ if __name__ == '__main__':
 
     if chosen_model == models[0]:
       genre_list = predict_genre(text, models[0])
-      st.success(genre_list)
+      st.success("Predicted genres: {0}.format(genre_list))
     elif chosen_model == models[1]:
       genre_list = predict_genre(text, models[1])
-      st.success(genre_list)
+      st.success("Predicted genres: {0}.format(genre_list))
