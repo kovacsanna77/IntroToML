@@ -38,8 +38,6 @@ stop_words = stopwords.words('english')
 #Adds stuff to our stop words list
 stop_words.extend(['.',','])
 
-
-## This function can improve, simplify. Look into Text Data Lecture
 def remove_stopwords(list_of_tokens):
     """
     Removes stopwords
