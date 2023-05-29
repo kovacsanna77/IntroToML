@@ -147,7 +147,7 @@ if __name__ == '__main__':
 
     if chosen_model == models[0]:
       genre_list = predict_genre(text, models[0])
-      st.success("Predicted genres: {0}.format(genre_list))
+      st.success("Predicted genres: {0}".format(genre_list))
     elif chosen_model == models[1]:
       genre_list = predict_genre(text, models[1])
-      st.success("Predicted genres: {0}.format(genre_list))
+      st.success("Predicted genres: {0}".format(genre_list))
