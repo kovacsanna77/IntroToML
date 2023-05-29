@@ -138,7 +138,8 @@ def predict_genre(text, model_choice):
 if __name__ == '__main__':
   st.title("Movie Genre classification")
   models = ['Logistic regression', 'SVM']
-  text = st.text_area("Write an overview of the movie to predict genre.","John Carter is a war-weary, former military captain who's inexplicably transported to the mysterious and exotic planet of Barsoom (Mars) and reluctantly becomes embroiled in an epic conflict. It's a world on the brink of collapse, and Carter rediscovers his humanity when he realizes the survival of Barsoom and its people rests in his hands.")
+  initial_plot="In a bleak dystopian future, humanity clings to survival deep underground within the confines of a colossal silo. Juliette, an engineer tasked with unraveling the mystery behind the death of a colleague, uncovers startling secrets that threaten the very fabric of their enclosed world. Based on the novel of the same name by Hugh Howey."
+  text = st.text_area("Write an overview of the movie to predict genre.",initial_plot)
 
  
   chosen_model = st.radio('Select a model to predict', models)
