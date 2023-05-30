@@ -142,7 +142,7 @@ def getGenreNames(inlist):
   return outlist
 if __name__ == '__main__':
   st.title("Movie Genre classification")
-  st.write("[github repo](https://github.com/kovacsanna77/IntroToML)")
+ 
   models = ['Logistic regression', 'SVM']
   initial_plot="In a bleak dystopian future, humanity clings to survival deep underground within the confines of a colossal silo. Juliette, an engineer tasked with unraveling the mystery behind the death of a colleague, uncovers startling secrets that threaten the very fabric of their enclosed world. Based on the novel of the same name by Hugh Howey."
   text = st.text_area("Write an overview of the movie to predict genre.",initial_plot)
