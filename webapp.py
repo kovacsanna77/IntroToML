@@ -93,7 +93,7 @@ def cleaning_our_texts(text):
   back_to_string = the_untokenizer(lemmatized_words)
   return back_to_string
 
-genre_cols=['Action', 'Adventure', 'Animation', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family', 'Fantasy', 'Foreign', 'History', 'Horror', 'Music', 'Mystery', 'Romance', 'ScienceFiction', 'TVMovie', 'Thriller', 'War', 'Western']
+genre_cols=['Action', 'Adventure', 'Animation', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family', 'Fantasy', 'History', 'Horror', 'Music', 'Mystery', 'Romance', 'ScienceFiction', 'Thriller', 'War', 'Western']
 feature_cols=['id']
 
 from sklearn.preprocessing import StandardScaler 
